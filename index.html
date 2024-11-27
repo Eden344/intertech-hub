@@ -3,129 +3,667 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MY PORTFOLIO</title>
-    <link rel="stylesheet" href="portfolio.css">
-   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Manage Landing Page</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="gebeya.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" 
+          integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <header class="header">
-        <a href="#" class="logo"><span>Ed</span>en</a>
-        <nav class="navbar">
-            <a href="#" class="active">Portfolio</a>
-            <a href="#">Services</a>
-            <a href="#">Experience</a>
-            <a href="#">Project</a>
-            <a href="#">Eduction</a>
-        </nav>
-        <a href="#" class="contact">Contact Me</a>
-    </header>
-
-    <section class="home">
-        <div class="home-content">
-            <h3>HI</h3>
-            <h1>I'm <span>Eden <br></span> a Frontend Developer</h1>
-            <p>
-                I have experience working with technologies like Figma, Bootstrap and TailwindCss aside from the basic HTML,CSS and JavaScriprt.
-            </p>
-
-            <div class="btn-box">
-                <button class="btn-1">Hire Me</button>
+      <nav class="mx-6 py-2 w-full">
+        <div  class="flex items-center justify-between w-full">
+            <div class="pt-2 mx-5">
+                <img  src="img/image-removebg-preview 1.png" alt="logo" class="h-10">
+            </div>
+            <div class="flex items-center md:hidden">
+                <button id="menuToggle" class=" text-gray-600 focus:outline-none">
+                    <i class="fa-solid fa-bars fa-lg"></i>
+                </button>
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <div class="group relative dropdown">
+                    <a href="#" class="dropdown-toggle">
+                        <i class="fa-solid fa-user"></i> Register/Sign in 
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu absolute bg-white border border-gray-300 mt-1 rounded-md shadow-lg">
+                        <li><a href="#" class="block px-4 py-2">Register</a></li>
+                        <li><a href="#" class="block px-4 py-2">Sign in</a></li>
+                    </ul>
+                </div>
+                <a href="#" class="">Home</a>
+                <a href="#" class="">Men</a>
+                <a href="#" class="">Women</a>
+                <a href="#" class="">Kids</a>
+                <a href="#" class="">Accessories</a>
+                <div class="group relative dropdown">
+                    <a href="#" class="dropdown-toggle">More <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu absolute bg-white border border-gray-300 mt-1 rounded-md shadow-lg">
+                        <li><a href="#" class="block px-4 py-2">Perfume</a></li>
+                        <li><a href="#" class="block px-4 py-2">Jewelries</a></li>
+                        <li><a href="#" class="block px-4 py-2">Gym wears</a></li>
+                        <li><a href="#" class="block px-4 py-2">Vintage wear</a></li>
+                        <li><a href="#" class="block px-4 py-2">Sports wear</a></li>
+                        <li><a href="#" class="block px-4 py-2">Pyjamas</a></li>
+                        <li><a href="#" class="block px-4 py-2">Slippers</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex items-center space-x-4">
+                <div class="flex search rounded-md w-40 h-6 border-2 border-gray-500 justify-between"> 
+                    <div class="w-2/3"><i class="fa-solid fa-magnifying-glass"></i> search</div> 
+                    <div class="rounded-l-none rounded-r-sm w-1/3 h-5 bg-purple-600 border-2 border-purple-600 items-end m-0 p-0">
+                        <span class="text-white px-3"><i class="fa-solid fa-magnifying-glass"></i></span>
+                    </div>
+                </div>
+                <div class="size-7">
+                    <img src="img/united kingdom.png" alt="Flag">
+                </div>
+                <div>EN/Currency<i class="fa-solid fa-chevron-down"></i></div>
+                <div class="size-7">
+                    <img src="img/Frame 24.png" alt="Currency">
+                </div>
             </div>
         </div>
-        <div class="img-box">
-            <img src="photo.jpg" alt="photo">
+    
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="md:hidden hidden">
+            <div class="flex flex-col space-y-2 mt-4">
+                <div class="dropdown">
+                    <a href="#" class="block px-4 py-2">
+                        <i class="fa-solid fa-user"></i> Register/Sign in
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu bg-white border border-gray-300 rounded-md shadow-lg">
+                        <li><a href="#" class="block px-4 py-2">Register</a></li>
+                        <li><a href="#" class="block px-4 py-2">Sign in</a></li>
+                    </ul>
+                </div>
+                <a href="index.html" class="block px-4 py-2">Home</a>
+                <a href="#" class="block px-4 py-2">Men</a>
+                <a href="#" class="block px-4 py-2">Women</a>
+                <a href="#" class="block px-4 py-2">Kids</a>
+                <a href="#" class="block px-4 py-2">Accessories</a>
+                <div class="dropdown">
+                    <a href="#" class="block px-4 py-2">More <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu bg-white border border-gray-300 rounded-md shadow-lg">
+                        <li><a href="#" class="block px-4 py-2">Perfume</a></li>
+                        <li><a href="#" class="block px-4 py-2">Jewelries</a></li>
+                        <li><a href="#" class="block px-4 py-2">Gym wears</a></li>
+                        <li><a href="#" class="block px-4 py-2">Vintage wear</a></li>
+                        <li><a href="#" class="block px-4 py-2">Sports wear</a></li>
+                        <li><a href="#" class="block px-4 py-2">Pyjamas</a></li>
+                        <li><a href="#" class="block px-4 py-2">Slippers</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <section class="py-5 bg-purple-500 w-full">+
+        <div class="bg-purple-500 w-full h-auto mx-auto px-4 flex flex-col md:flex-row justify-between">
+            <div class="flex flex-col items-start m-5 w-full md:w-1/3">
+                <div class="font-extrabold text-white text-8xl py-3 hidden md:block">Gebeya</div>
+                <div class="justify-items-center size-27 my-10 ml-16 hidden md:block">
+                    <img src="img/Ellipse 5.png" alt="">
+                </div>
+            </div>
+    
+            <div class="flex flex-col items-center mx-5 w-full md:w-1/3">
+                <div class="justify-items-center size-25 mb-14">
+                    <img src="img/Ellipse 3.png" alt="">
+                </div>
+                <div>
+                    <button class="w-52 h-auto bg-yellow-400 border-2 my-10 border-yellow-400 rounded-sm text-2xl font-semibold">Explore Now</button>
+                </div>
+            </div>
+    
+            <div class="flex flex-col items-center ml-5 w-full md:w-1/3">
+                <div class="justify-items-end">
+                    <p class="text-white font-sans text-xl hidden md:block">
+                        Discover a world of convenience with our
+                        user-friendly platform, curated collections,
+                        and exceptional customer service.
+                    </p>
+                </div>
+                <div class="font-extrabold text-white text-8xl justify-self-start my-10 hidden md:block">
+                    <p>SHOP</p>
+                </div>
+                <div class="my-10 hidden md:block">
+                    <img src="img/Ellipse 4.png" alt="">
+                </div>
+            </div>
+        </div>
+    
+        <!-- Mobile View -->
+        <div class="flex flex-col items-center mt-10 md:hidden">
+            <div class="font-extrabold text-white text-8xl py-3">Gebeya</div>
+            <div class="justify-items-center size-25 mb-14">
+                <img src="img/Ellipse 3.png" alt="">
+            </div>
+            <p class="text-white font-sans text-xl text-center">
+                Discover a world of convenience with our
+                user-friendly platform, curated collections,
+                and exceptional customer service.
+            </p>
+            <div class="my-10">
+                <button class="w-52 h-auto bg-yellow-400 border-2 border-yellow-400 rounded-sm text-2xl font-semibold">Explore Now</button>
+            </div>
         </div>
     </section>
-    <section class="about">
-        <div class="about-img">
-            <img src="photo.jpg" alt="">
-        </div>
-        <div class="about-content">
-            <h2 class="heading">
-                About <span>Me</span>
-            </h2>
-            <h3>Frontend <span>Developer</span></h3>
+
+<section class="m-8">
+    <div class="flex items-center justify-between">
+        <div class="font-sans text-start text-xl font-bold">
             <p>
-                I am Eden Melaku and i am a fourth year software engineering student at Addis Ababa Science and Technology University.
-                 Aside from developing my skills as a frontend developer i like to read ficition in my spare time.
+                Latest Collection
             </p>
         </div>
-    </section>
-
-    <section class="project">
-        <div class="container">
-        <div class="project-img-1">
-            
-            <video controls>
-    <source src="travel agency clone project.mp4" type="video/mp4" autoplay muted>
-    Your browser does not support the video tag.
-</video>
+        <div class="">
+            <img src="img/Group 225.png" alt="" class=" h-10">
         </div>
-        <div class="project-content">
-            <h2 class="heading">
-                My <span>Project</span>
-            </h2>
-           
-            <p>
-                This is a mini project i did last summer as part of an internship training, our supervisors gave as a 
-                Figma demo our job was to make that demo using any frontend tools we wanted. i used HTML,CSS and a little bit of BootStrap to make this.
-            </p>
-        </div>
-
-        <div class="project-img-1">
-
-             <video controls>
-    <source src="bootstrap bootcamp project.mp4" type="video/mp4" autoplay muted>
-    Your browser does not support the video tag.
-</video>
-        </div>
-        <div class="project-content">
-            <h2 class="heading">
-                My <span>Project</span>
-            </h2>
-           
-            <p>
-                This is also a mini project i did last summer as part of an internship training, it was my first inroduction into BootStrap and i really
-                enjoyed working on it.
-                
-            </p>
-        </div>
-
 
     </div>
-    </section>
+</section>
 
-    <section class="contact-form">
-        <h2 class="contact-me">Contact <span>Me</span> </h2>
-        <form action="#">
-            <div class="input-box">
-                <input type="text" placeholder="Full Name">
-                <input type="email" placeholder="Email">
+
+<section class="m-8">
+    <div class="flex overflow-x-auto gap-3">
+        <div class="border-2 border-gray-400 rounded-md w-1/3 h-auto flex-shrink-0">
+            <div class="bg-gray-300 m-4 rounded-md h-auto flex justify-between">
+                <div class="mt-4 size-16 ml-3">
+                    <img src="img/Frame 29.png" alt="">
+                </div>
+                <div>
+                    <img src="img/bag.png" alt="">
+                </div>
+                <div class="mt-4 size-16 mr-3">
+                    <img src="img/Frame 30.png" alt="">
+                </div>
+            </div>
+            
+            <div class="flex items-center justify-between my-4">
+                <div>
+                    <button class="border-2 border-gray-400 rounded-full ml-3 w-20 text-gray-600">Women</button>
+                </div>
+                <div class="text-gray-600 mr-3">
+                    <i class="fa-solid fa-star text-yellow-500"></i>2K+ rating
+                </div>
             </div>
 
-            <div class="input-box">
-                <input type="number" placeholder="Phone Number">
-                <input type="email" placeholder="Subject">
+            <div class="flex flex-col items-start ml-3 my-4">
+                <div class="font-sans font-bold text-xl">
+                    French Kiss Bag
+                </div>
+                <div class="font-sans font-semibold text-gray-500">
+                    ALDO
+                </div>
             </div>
 
-            <textarea name="message" id="message" cols="38" rows="10" placeholder="Your Message"></textarea>
-            <input type="submit" value="send message" class="btn-1">
-        </form>
-    </section>
-
-    <footer class="footer">
-        <div class="social">
-            <a href="#"><i class='bx bxl-linkedin'></i></a>
-            <a href="#"><i class='bx bxl-facebook-circle' ></i></a>
-            <a href="#"><i class='bx bxl-telegram' ></i></a>
+            <div class="flex items-center justify-between my-4">
+                <div class="font-sans font-bold text-xl ml-3">
+                    $500
+                </div>
+                <div class="h-auto mr-3">
+                    <a href="add_to_cart.html">
+                        <button class="h-16 w-32 bg-yellow-500 text-white font-medium rounded-md">Add to cart</button>
+                    </a>
+                </div>
+            </div>
         </div>
-        <ul class="list">
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">About Me</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-        <p class="copyright">&copy; 2024 EDEN | All Rights Reserved</p>
-    </footer>
+
+        <div class="border-2 border-gray-400 rounded-md w-1/3 h-auto flex-shrink-0">
+            <div class="bg-gray-300 m-4 rounded-md h-auto flex justify-between">
+                <div class="mt-4 size-16 ml-3">
+                    <img src="img/Frame 29.png" alt="">
+                </div>
+                <div class="mt-11">
+                    <img src="img/shoes.png" alt="">
+                </div>
+                <div class="mt-4 size-16 mr-3">
+                    <img src="img/Frame 30.png" alt="">
+                </div>
+            </div>
+            
+            <div class="flex items-center justify-between my-4">
+                <div>
+                    <button class="border-2 border-gray-400 rounded-full ml-3 w-16 text-gray-600">Kids</button>
+                </div>
+                <div class="text-gray-600 mr-3">
+                    <i class="fa-solid fa-star text-yellow-500"></i>1K+ rating
+                </div>
+            </div>
+
+            <div class="flex flex-col items-start ml-3 my-4">
+                <div class="font-sans font-bold text-xl">
+                    Burberry Shine
+                </div>
+                <div class="font-sans font-semibold text-gray-500">
+                    FENDI
+                </div>
+            </div>
+
+            <div class="flex items-center justify-between my-4">
+                <div class="font-sans font-bold text-xl ml-3">
+                    $150
+                </div>
+                <div class="h-auto mr-3">
+                    <a href="add_to_cart.html">
+                        <button class="h-16 w-32 bg-yellow-500 text-white font-medium rounded-md">Add to cart</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="border-2 border-gray-400 rounded-md w-1/3 h-auto flex-shrink-0">
+            <div class="bg-gray-300 m-4 rounded-md h-auto flex justify-between">
+                <div class="mt-4 size-16 ml-3">
+                    <img src="img/Frame 29.png" alt="">
+                </div>
+                <div class="mt-14">
+                    <img src="img/dress.png" alt="">
+                </div>
+                <div class="mt-4 size-16 mr-3">
+                    <img src="img/Frame 30.png" alt="">
+                </div>
+            </div>
+            
+            <div class="flex items-center justify-between my-4">
+                <div>
+                    <button class="border-2 border-gray-400 rounded-full ml-3 w-20 text-gray-600">Women</button>
+                </div>
+                <div class="text-gray-600 mr-3">
+                    <i class="fa-solid fa-star text-yellow-500"></i>5K+ rating
+                </div>
+            </div>
+
+            <div class="flex flex-col items-start ml-3 my-4">
+                <div class="font-sans font-bold text-xl">
+                    Alvero Gown
+                </div>
+                <div class="font-sans font-semibold text-gray-500">
+                    DIVINE
+                </div>
+            </div>
+
+            <div class="flex items-center justify-between my-4">
+                <div class="font-sans font-bold text-xl ml-3">
+                    $300
+                </div>
+                <div class="h-auto mr-3">
+                    <a href="add_to_cart.html">
+                        <button class="h-16 w-32 bg-yellow-500 text-white font-medium rounded-md">Add to cart</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<section class="mx-8 my-14">
+    <div class="flex items-center justify-between overflow-x-auto whitespace-nowrap">
+      <div class="flex flex-nowrap">
+        <button class="border-2 border-gray-400 rounded-full ml-3 w-32 h-16 text-gray-600">Men</button>
+        <button class="border-2 border-gray-400 rounded-full ml-3 w-32 h-16 bg-yellow-400 text-white">Women</button>
+        <button class="border-2 border-gray-400 rounded-full ml-3 w-32 h-16 text-gray-600">Kids</button>
+        <button class="border-2 border-gray-400 rounded-full ml-3 w-32 h-16 text-gray-600">Perfumes</button>
+        <button class="border-2 border-gray-400 rounded-full ml-3 w-32 h-16 text-gray-600">Sport</button>
+        <button class="border-2 border-gray-400 rounded-full ml-3 w-32 h-16 text-gray-600">Jewelry</button>
+      </div>
+    </div>
+  </section>
+  
+
+  <section class="mx-8 my-14">
+    <div class="grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
+      <div class="border-2 border-gray-400 rounded-md h-auto">
+        <div class="bg-gray-300 m-4 rounded-md h-auto">
+          <img src="img/hills.png" alt="Shoes" class="mx-10 py-5">
+        </div>
+        <div class="font-sans font-bold text-xl text-center">
+          Shoes
+        </div>
+        <div class="font-sans text-center text-gray-400">
+          see all collections
+        </div>
+      </div>
+  
+      <div class="border-2 border-gray-400 rounded-md h-auto">
+        <div class="bg-gray-300 m-4 rounded-md h-auto">
+          <img src="img/hand bag.png" alt="Bags" class="mx-5 py-3">
+        </div>
+        <div class="font-sans font-bold text-xl text-center">
+          Bags
+        </div>
+        <div class="font-sans text-center text-gray-400">
+          see all collections
+        </div>
+      </div>
+  
+      <div class="border-2 border-gray-400 rounded-md h-auto">
+        <div class="bg-gray-300 m-4 rounded-md h-auto">
+          <img src="img/coat.png" alt="Jackets" class="mx-10 py-3">
+        </div>
+        <div class="font-sans font-bold text-xl text-center">
+          Jackets
+        </div>
+        <div class="font-sans text-center text-gray-400">
+          see all collections
+        </div>
+      </div>
+  
+      <div class="border-2 border-gray-400 rounded-md h-auto">
+        <div class="bg-gray-300 m-4 rounded-md h-auto">
+          <img src="img/langerie.png" alt="Lingerie" class="mx-11 py-4">
+        </div>
+        <div class="font-sans font-bold text-xl text-center">
+          Lingerie
+        </div>
+        <div class="font-sans text-center text-gray-400">
+          see all collections
+        </div>
+      </div>
+  
+      <div class="border-2 border-gray-400 rounded-md h-auto">
+        <div class="bg-gray-300 m-4 rounded-md h-auto">
+          <img src="img/belt.png" alt="Belts" class="mx-10 py-4">
+        </div>
+        <div class="font-sans font-bold text-xl text-center">
+          Belts
+        </div>
+        <div class="font-sans text-center text-gray-400">
+          see all collections
+        </div>
+      </div>
+  
+      <div class="border-2 border-gray-400 rounded-md h-auto">
+        <div class="bg-gray-300 m-4 rounded-md h-auto">
+          <img src="img/sports bra.png" alt="Street wear" class="mx-10 py-4">
+        </div>
+        <div class="font-sans font-bold text-xl text-center">
+          Street wear
+        </div>
+        <div class="font-sans text-center text-gray-400">
+          see all collections
+        </div>
+      </div>
+  
+      <div class="border-2 border-gray-400 rounded-md h-auto">
+        <div class="bg-gray-300 m-4 rounded-md h-auto">
+          <img src="img/sunglass.png" alt="Sunglasses" class="mx-10 py-5">
+        </div>
+        <div class="font-sans font-bold text-xl text-center">
+          Sunglasses
+        </div>
+        <div class="font-sans text-center text-gray-400">
+          see all collections
+        </div>
+      </div>
+  
+      <div class="border-2 border-gray-400 rounded-md h-auto">
+        <div class="bg-gray-300 m-4 rounded-md h-auto">
+          <img src="img/sundress.png" alt="Sun wear" class="mx-5 py-3 size-32">
+        </div>
+        <div class="font-sans font-bold text-xl text-center">
+          Sun wear
+        </div>
+        <div class="font-sans text-center text-gray-400">
+          see all collections
+        </div>
+      </div>
+  
+      <div class="border-2 border-gray-400 rounded-md h-auto">
+        <div class="bg-gray-300 m-4 rounded-md h-auto">
+          <img src="img/hats.png" alt="Hats" class="mx-10 py-3">
+        </div>
+        <div class="font-sans font-bold text-xl text-center">
+          Hats
+        </div>
+        <div class="font-sans text-center text-gray-400">
+          see all collections
+        </div>
+      </div>
+  
+      <div class="border-2 border-gray-400 rounded-md h-auto">
+        <div class="bg-gray-300 m-4 rounded-md h-auto">
+          <img src="img/sandles.png" alt="Slippers" class="mx-11 py-4">
+        </div>
+        <div class="font-sans font-bold text-xl text-center">
+          Slippers
+        </div>
+        <div class="font-sans text-center text-gray-400">
+          see all collections
+        </div>
+      </div>
+  
+      <div class="border-2 border-gray-400 rounded-md h-auto">
+        <div class="bg-gray-300 m-4 rounded-md h-auto">
+          <img src="img/wigs 1.png" alt="Wigs" class="mx-10 py-4">
+        </div>
+        <div class="font-sans font-bold text-xl text-center">
+          Wigs
+        </div>
+        <div class="font-sans text-center text-gray-400">
+          see all collections
+        </div>
+      </div>
+  
+      <div class="border-2 border-gray-400 rounded-md h-auto">
+        <div class="bg-gray-300 m-4 rounded-md h-auto">
+          <img src="img/foundation.png" alt="Cosmetics" class="mx-10 py-4">
+        </div>
+        <div class="font-sans font-bold text-xl text-center">
+          Cosmetics
+        </div>
+        <div class="font-sans text-center text-gray-400">
+          see all collections
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+<section class="mx-8 my-10">
+    <div class="flex items-center justify-around">
+        <div class="flex items-center justify-evenly bg-purple-500 w-44 h-12 rounded-lg">
+            <button class="text-white">See More</button>
+            <img src="img/Group 217.png" alt="">
+        </div>
+    </div>
+    
+</section>
+
+
+<section class="mx-8 my-14">
+    <div class="bg-purple-200 rounded-lg h-auto">
+        <div class="flex flex-col lg:flex-row items-center lg:items-start justify-between">
+            <!-- Text Section -->
+            <div class="flex flex-col lg:w-1/2 w-full px-5">
+                <div class="mt-5 text-purple-600 text-2xl font-sans font-bold text-wrap">
+                    Our Curated Summer Collection
+                </div>
+
+                <div class="font-sans font-normal text-xl mt-6 mb-6 text-purple-600">
+                    Explore our curated summer collection featuring trending styles, vibrant colors, 
+                    and lightweight fabrics perfect for long days and nights.
+                </div>
+
+                <div class="w-40 h-10 py-2 rounded-lg bg-yellow-500 text-white text-center mx-auto lg:mx-0 mt-4 mb-6">
+                    Explore Now
+                </div>
+            </div>
+
+            <!-- Images Section -->
+            <div class="hidden lg:flex flex-wrap lg:w-1/2 justify-center gap-6">
+                <div>
+                    <img src="img/Ellipse 9.png" alt="Decorative">
+                </div>
+                <div>
+                    <img src="img/Ellipse 13.png" alt="Decorative">
+                </div>
+                <div>
+                    <img src="img/Ellipse 9.png" alt="Decorative">
+                </div>
+                <div>
+                    <img src="img/Ellipse 11.png" alt="Decorative">
+                </div>
+                <div>
+                    <img src="img/Ellipse 13.png" alt="Decorative">
+                </div>
+                <div>
+                    <img src="img/Ellipse 9.png" alt="Decorative">
+                </div>
+                <div>
+                    <img src="img/Ellipse 11.png" alt="Decorative">
+                </div>
+                <div>
+                    <img src="img/Ellipse 13.png" alt="Decorative">
+                </div>
+                <div>
+                    <img src="img/Ellipse 9.png" alt="Decorative">
+                </div>
+            </div>
+
+            <!-- Beach Image Section -->
+            <div class="hidden lg:block w-3/4 h-96">
+                <img src="img/beach.png" alt="Beach" class="h-full">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="m-8">
+    <div class="flex items-center justify-between">
+        <div class="font-sans text-start text-xl font-bold">
+            <p>
+                Browse by category
+            </p>
+        </div>
+        <div class="">
+            <img src="img/Group 225.png" alt="" class=" h-10">
+        </div>
+
+    </div>
+</section>
+
+
+<section class="mx-8 my-10">
+
+    <div class="flex justify-between gap-3 ">
+        <div class=" rounded-md h-auto w-1/4">
+            <div class="bg-gray-300  m-4 rounded-md h-auto ">
+                <img src="img/tshirt.png" alt="" class="mx-4 py-5 size-64">
+    
+            </div>
+            <div class="font-sans font-bold text-xl text-center">
+                Casual wear
+            </div>
+            <div class="font-sans text-center text-gray-400">
+                over 20 categories in stock
+            </div>
+    
+        </div>
+    
+        <div class=" rounded-md h-auto w-1/4">
+            <div class="bg-gray-300  m-4 rounded-md h-auto  ">
+                <img src="img/sundress.png" alt="" class="mx-5 py-3 size-64">
+    
+            </div>
+            <div class="font-sans font-bold text-xl text-center">
+                Vintage
+            </div>
+            <div class="font-sans text-center text-gray-400">
+                over 31 categories in stock
+            </div>
+    
+        </div>
+    
+        <div class=" rounded-md h-auto w-1/4">
+            <div class="bg-gray-300  m-4 rounded-md h-auto  ">
+                <img src="img/makeup.png" alt="" class="mx-4 py-3 size-64">
+    
+            </div>
+            <div class="font-sans font-bold text-xl text-center">
+                Beauty products
+            </div>
+            <div class="font-sans text-center text-gray-400">
+                over 24 categories in stock
+            </div>
+    
+        </div>
+    
+        <div class=" rounded-md h-auto w-1/4">
+            <div class="bg-gray-300  m-4 rounded-md h-auto  ">
+                <img src="img/workout.png" alt="" class="mx-4 py-4 size-64">
+    
+            </div>
+            <div class="font-sans font-bold text-xl text-center">
+                Gym wear
+            </div>
+            <div class="font-sans text-center text-gray-400">
+                over 32 categories in stock
+            </div>
+    
+        </div>
+    
+    </div>
+
+</section>
+
+<footer class="mt-36 bg-purple-700 h-auto">
+    <div class="flex flex-wrap items-center justify-between lg:flex-nowrap lg:items-start">
+        <!-- Logo and Social Media Icons -->
+        <div class="flex flex-col items-center w-full lg:w-auto">
+            <!-- Logo -->
+            <div class="m-6">
+                <img src="img/Group.png" alt="" class="size-32">
+            </div>
+            <!-- Social Media Icons -->
+            <div class="flex items-center justify-center space-x-6 m-6">
+                <div><i class="fa-brands fa-instagram text-2xl text-white"></i></div>
+                <div><i class="fa-brands fa-whatsapp text-2xl text-white"></i></div>
+                <div><i class="fa-brands fa-x-twitter text-2xl text-white"></i></div>
+            </div>
+        </div>
+
+        <!-- Links Section -->
+        <div class="flex flex-col w-full lg:w-auto lg:flex-row lg:space-x-10 my-6">
+            <!-- About -->
+            <div class="flex flex-col items-center lg:items-start my-4">
+                <div class="text-white font-bold text-lg">About</div>
+                <div class="text-white font-light">About Us</div>
+                <div class="text-white font-light">News & Blog</div>
+                <div class="text-white font-light">Location</div>
+            </div>
+
+            <!-- Product -->
+            <div class="flex flex-col items-center lg:items-start my-4">
+                <div class="text-white font-bold text-lg">Product</div>
+                <div class="text-white font-light">Pricing</div>
+                <div class="text-white font-light">Store</div>
+                <div class="text-white font-light">Features</div>
+            </div>
+
+            <!-- Discover -->
+            <div class="flex flex-col items-center lg:items-start my-4">
+                <div class="text-white font-bold text-lg">Discover</div>
+                <div class="text-white font-light">Contact us</div>
+                <div class="text-white font-light">Customers</div>
+                <div class="text-white font-light">Affiliates</div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script src="gebeya.js"> </script>
 </body>
 </html>
