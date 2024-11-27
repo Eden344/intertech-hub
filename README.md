@@ -1,0 +1,1 @@
+this site has 3 main pages the home page, add to cart page and the check our page. in the home page you can look at most of the products avaliable , on the add to cart page you can choose a specific product and add it to cart on the check out page you can see your purchase.
